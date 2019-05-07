@@ -1,7 +1,7 @@
 ![Image](https://github.com/BringSteam/Submissions/blob/master/cy.jpg "My CV Pic")
 
 Beirut, Lebanon  
-Phone:  +961 3 000 000
+Phone:  +961 3 000 000  
 Email: youssef.charbel@hotmail.com
 <br/>
 # Charbel Youssef<br/>
