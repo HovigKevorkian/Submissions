@@ -1,6 +1,6 @@
 Beirut, Lebanon  
-Phone:  
-Email:   
+Phone:  +961 3 000 000
+Email: youssef.charbel@hotmail.com
 <br/>
 # Charbel Youssef<br/>
     
