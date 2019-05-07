@@ -15,7 +15,7 @@ Marital Status: Single
 Driving License: Lebanon, Qatar  
 <br/>
 ## Professional Experience  
-###JUL 2014 – APR 2017  
+### JUL 2014 – APR 2017  
 Cisco Senior Account Manager  
 PC Dealnet Sal (ITG – Holcom Group) - Lebanon  
 Company Industry: Computer/Hardware Distributor  
@@ -40,14 +40,14 @@ Networks, IDM, NCO, etc...)
 * Educate partners on how to create a partnership with Cisco and how to renew it.  
 
 
-###APR 2013 – JUL 2014:
+### APR 2013 – JUL 2014:
 Founder  
 UPFRONT SAL  
 Company Industry: E-Learning  
 
 Creation, development & management of http://www.schoolonline.com.lb
 
-###FEB 2010 – MAR 2013:
+### FEB 2010 – MAR 2013:
 Senior Key Account Manager  
 Qatar Computer Services  
 Company Industry: Computer/Hardware  
@@ -80,7 +80,7 @@ Riverbed, Zoho, TrendMicro, RSA, Websense, Ultimus, etc...
 * Coordinate with the engineers and the customer to execute installation.  
 * Organize/conduct product training and seminars for customers on a regular basis.  
 
-###JUL 2010 – MAR 2013:  
+### JUL 2010 – MAR 2013:  
 WEBSENSE Product Manager  
 Qatar Computer Services  
 Company Industry: Computer/Hardware  
@@ -103,7 +103,7 @@ Job Role: Sales
 * Act as a leader within the company.  
 
 
-###FEB 2008 – FEB 2010:  
+### FEB 2008 – FEB 2010:  
 Account Manager  
 Teletrade Computer Systems  
 Company Industry: Computer/Hardware  
@@ -124,7 +124,7 @@ Job Role: Sales
 * Coordinate with the engineers and the customer to execute installation.  
 
 
-###OCT 2007 – FEB 2008:  
+### OCT 2007 – FEB 2008:  
 IT Consultant  
 M2 | Multimedia Megastore  
 Company Industry: Computer/Hardware  
@@ -140,17 +140,17 @@ Job Role: Sales
 * Being involved in sales and support and, where appropriate, maintaining contact with client organizations.  
 * Identifying potential clients & building and maintaining contacts.  
 
-##Education  
-###2001 – 2007:  
+## Education  
+### 2001 – 2007:  
 Bachelor Degree in Business Computing  
 Notre Dame University, Zouk Mosbeh, Lebanon  
 
-###1983 – 1999:  
+### 1983 – 1999:  
 Baccalaureate, High School Equivalence Certificate Program  
 College Frères Sacré-Coeur, Jemayze, Lebanon  
 
-##Courses  
-###OCT 2000:  
+## Courses  
+### OCT 2000:  
 **MCSE: Microsoft Certified Systems Engineer**  
 New Horizons, Zalka, Lebanon  
 
@@ -162,7 +162,7 @@ New Horizons, Zalka, Lebanon
 * Deploying and managing Microsoft Internet Security and Acceleration Server 2000.  
 * Implementing and Managing Microsoft Exchange 2000.  
 
-##Certifications  
+## Certifications  
 MAR 2012:  
 **Microsoft Partner Network Sales & Marketing Competency Assessment for Systems Management**  
 Microsoft.com  
@@ -183,7 +183,7 @@ AUG 2010:
 **Riverbed Cascade Specialization**  
 Riverbed.com  
 
-##Skills & Expertise  
+## Skills & Expertise  
 
 * Sales Management  
 * Professional Communication & Negotiation Skills  
@@ -195,11 +195,11 @@ Riverbed.com
 * Microsoft Visual Basic .NET 2003  
 * Html5, CSS, JavaScript, PHP, MySQL, Angular JS, Laravel  
 
-##Languages
+## Languages
 **Fluent:** Arabic, English and French
 
-##Interests
+## Interests
 Basketball, football, Tennis, Snowboard, Kite Surfing, Music
 
-##References
+## References
 **Available Upon Request.**
