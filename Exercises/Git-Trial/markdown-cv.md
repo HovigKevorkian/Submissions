@@ -1,4 +1,4 @@
-![Image](https://github.com/BringSteam/Submissions/blob/master/cy.jpg "My CV Pic")
+![Image](https://github.com/BringSteam/Submissions/blob/master/Exercises/Git-Trial/cy.jpg "My CV Pic")
 
 Beirut, Lebanon  
 Phone:  +961 3 000 000  
