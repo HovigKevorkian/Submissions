@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(32, 32, 92, 0.788);
+}
+
+.mainBanner {
+    background-image: url(/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 900px;
+    height: 200px;
+    margin: 20px auto;
+}
