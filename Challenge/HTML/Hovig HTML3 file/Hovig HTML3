@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <link rel="stylesheet" href="stylesheet3.css" >
+  </head>
+  <body>
+    <header> 
+      <div class="container1"> 
+        <h1> H.K Web Develompment </h1>
+        <p> For a Brighter Future </p>
+      </div>
+    </header>
+      <div class="container2"> 
+        <ul> 
+          <li> <a href="#"> Home </a> </li> 
+          <li> <a href="#"> </a> Contact </li> 
+          <li> <a href="#"> </a> Page1 </li> 
+          <li> <a href="#"> </a> Page2 </li> 
+          <li> <a href="#"> </a> Page3 </li> 
+          <li> <a href="#"> </a>  Page4 </li> 
+        </ul>
+      </div>
+
+      <div class="container3"> 
+        <h2> Main Menue </h2>
+        <ul> 
+          <li> <a href="#"> Menu Item1 </a> </li> 
+          <li> <a href="#"> </a> Menu Item2 </li> 
+          <li> <a href="#"> </a> Menu Item3  </li> 
+          <li> <a href="#"> </a> Menu Item4  </li> 
+          <li> <a href="#"> </a> Menu Item5  </li> 
+          <li> <a href="#"> </a>  Menu Item6 </li> 
+          <li> <a href="#"> </a>  Menu Item7  </li> 
+          <li> <a href="#"> </a>  Menu Item8  </li> 
+          <li> <a href="#"> </a>  Menu Item9  </li>
+        </ul>
+      </div>
+
+      <div class="container4"> 
+        <h2> Block </h2>
+        <p>  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, esse? Dolor, voluptatem quam dolores excepturi, libero ullam molestias in enim nemo repellendus alias? Rerum quam omnis temporibus. Nulla, sapiente dolorem!</p>
+      
+      </div>
+      <div class="container5">  Gallery </div>
+      <br>
+      <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum nisi possimus totam aliquam vel assumenda, eos voluptate ducimus excepturi quos incidunt debitis voluptatem aspernatur iste eveniet minus amet ex? Labore.</p>
+    
+      <div class="container5"> 
+        <h2> Subscription </h2>
+        <button class="button" > Read More </button>
+      </div>
+
+      <div class="container6"> 
+        <h2> OtherServices </h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magnam doloremque enim, quis aspernatur quo illum, ipsa doloribus eius dolor quidem illo impedit necessitatibus reprehenderit architecto, facilis molestiae. Nobis, eligendi? </p>
+      <div>
+
+      <br>
+
+
+    
+    
+
+  </body>
+</html>
