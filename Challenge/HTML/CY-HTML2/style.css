@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato;
+    font-size: 18px;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: brown;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 40px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+nav ul li a.active {
+    color: brown;
+    background-color: #fff;
+  }
+
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: brown;
+}
+
+.coding-img {
+  margin-top: 20px;
+  width: 700px;
+  height: 100%;
+}
+
+.listItems {
+  padding: 60px 100px;
+  list-style-type: disc;
+}
+
+footer a {
+  margin-left: 80px;
+}
