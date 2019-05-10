@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title> This is Hovig html1 </title>
+    </head>
+
+        
+
+
+    <body>
+        <header>
+        <h1> This is our first HTML challenge </h1>
+        <p> <strong> Lorem ipsum  <strong> dolor sit amet, consectetur adipiscing elit, <br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </br> </p>
+        </header>
+        <h2> <q> That was Lorem impsum text example </q> </h2>
+        <h3> And this would be our third type of headings </h3>
+        <p> <b> Here is a photo of Github's Octocat logo </b> </p>
+        <img src="https://github.githubassets.com/images/modules/open_graph/github-octocat.png" height=500px width=500px alt="a photo of Github's cat logo" >
+
+        </header>
+    </body>
+    <footer>
+
+    </footer>
+</html>
