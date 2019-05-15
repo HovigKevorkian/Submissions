@@ -126,7 +126,7 @@ hgroup h2 {
   padding: 0 0 10px 30px;
 }
 
-/** SKILLS **/
+/**** SKILLS ****/
 .skills-primary::before {
   content: 'Main';
 }
