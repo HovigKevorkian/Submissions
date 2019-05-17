@@ -34,7 +34,7 @@ header,
   display: flex;
   flex-basis: 26%;
   height: 470px;
-  background-image: url('/img/cyimg1.jpg');
+  background-image: url('img/cyimg1.jpg');
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
