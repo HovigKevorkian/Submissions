@@ -5,10 +5,37 @@
     <title>Step 6</title>
   </head>
   <body>
-      <img src="images/image1.jpg" id="image1" />
-      <img src="images/image2.jpg" id="image2" />
-      <img src="images/image3.jpg" id="image3" />
-      <img src="images/image4.jpg" id="image4" />
-      <img src="images/image5.jpg" id="image5" />
+      <img src="images/image1.jpg" id="image1" onmouseover="mouseOver(1)" onmouseout="mouseOut(1)" />
+      <img src="images/image2.jpg" id="image2" onmouseover="mouseOver(2)" onmouseout="mouseOut(2)" />
+      <img src="images/image3.jpg" id="image3" onmouseover="mouseOver(3)" onmouseout="mouseOut(3)" />
+      <img src="images/image4.jpg" id="image4" onmouseover="mouseOver(4)" onmouseout="mouseOut(4)" />
+      <img src="images/image5.jpg" id="image5" onmouseover="mouseOver(5)" onmouseout="mouseOut(5)" />
   </body>
+  <script>
+      function mouseOver(x) {
+        if (x == 1) {
+          document.getElementById("image" + x).src = "images/image2.jpg";
+        } else if (x == 2) {
+          document.getElementById("image" + x).src = "images/image3.jpg";
+        } else if (x == 3) {
+          document.getElementById("image" + x).src = "images/image4.jpg";
+        } else if (x == 4) {
+          document.getElementById("image" + x).src = "images/image5.jpg";
+        } else if (x == 5) {
+          document.getElementById("image" + x).src = "images/image1.jpg";
+        }}
+
+        function mouseOut(x) {
+        if (x == 1) {
+          document.getElementById("image" + x).src = "images/image1.jpg";
+        } else if (x == 2) {
+          document.getElementById("image" + x).src = "images/image2.jpg";
+        } else if (x == 3) {
+          document.getElementById("image" + x).src = "images/image3.jpg";
+        } else if (x == 4) {
+          document.getElementById("image" + x).src = "images/image4.jpg";
+        } else if (x == 5) {
+          document.getElementById("image" + x).src = "images/image5.jpg";
+        }}
+    </script>
 </html>
