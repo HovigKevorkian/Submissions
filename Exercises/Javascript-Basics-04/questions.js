@@ -49,8 +49,9 @@ const absoluteValue = (num) => {
 }
 const absoluteValueArray = (array) => {
     for(var i = 0; i < array.length; i++) {
-        return Math.abs(array[i]);
+        array[i] = Math.abs(array[i]);
 }
+    return array;
 }
 const circleSurface = (radius) => {
     return Math.ceil(radius * radius * 3.14);
@@ -65,7 +66,7 @@ const BMI = (weight, height) => {
 const createLanguagesArray = () => {
     return array = ['Html', 'CSS', 'Java', 'PHP']
 }
-/***********************************************************************/
+/*** COMMIT ***************************************************/
 const createNumbersArray = () => {
 
 }
