@@ -7,13 +7,13 @@
 <body>
   <form>
     <label for="name">Your name  : </label>
-    <input type="text" name="name" value="" id="name" onblur="loseFocus()"/>
+    <input type="text" name="name" value="" id="name" />
   </form>
 
   <script>
-    var focus = document.getElementById('name');
+    var inputBox = document.getElementById('name');
 
-    function loseFocus() {
+    inputBox.onblur = function() {
       alert("Thank you for participating!");
     }
   </script>
