@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Step 5</title>
-  </head>
-  <body>
-    <div class="container">
-      <img src="images/image1.jpg" id="image1" />
-      <img src="images/image2.jpg" id="image2" />
-      <img src="images/image3.jpg" id="image3" />
-      <img src="images/image4.jpg" id="image4" />
-      <img src="images/image5.jpg" id="image5" />
-    </div>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Step 5</title>
+</head>
+
+<body>
+  <div class="container">
+    <img src="images/image1.jpg" id="image1" onmouseover="mouseOver(1)" />
+    <img src="images/image2.jpg" id="image2" onmouseover="mouseOver(2)" />
+    <img src="images/image3.jpg" id="image3" onmouseover="mouseOver(3)" />
+    <img src="images/image4.jpg" id="image4" onmouseover="mouseOver(4)" />
+    <img src="images/image5.jpg" id="image5" onmouseover="mouseOver(5)" />
+  </div>
+
+  <script>
+    function mouseOver(x) {
+      if (x == 1) {
+        document.getElementById("image" + x).src = "images/image2.jpg";
+      } else if (x == 2) {
+        document.getElementById("image" + x).src = "images/image3.jpg";
+      } else if (x == 3) {
+        document.getElementById("image" + x).src = "images/image4.jpg";
+      } else if (x == 4) {
+        document.getElementById("image" + x).src = "images/image5.jpg";
+      } else if (x == 5) {
+        document.getElementById("image" + x).src = "images/image1.jpg";
+      }}
+  </script>
+</body>
+
 </html>
