@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Step 2</title>
 </head>
+
 <body>
   <form>
-    <label for="name">Your name  : </label>
+    <label for="name">Your name : </label>
     <input type="text" name="name" value="" id="name" />
   </form>
 
   <script>
-    var inputBox = document.getElementById('name');
+    var inputBox = document.querySelector("#name");
 
-    inputBox.onblur = function() {
-      alert("Thank you for participating!");
-    }
+    inputBox.addEventListener("blur", function () {
+      alert("thank you for participating!");
+    });
   </script>
 </body>
+
 </html>
