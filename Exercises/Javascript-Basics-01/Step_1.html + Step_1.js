@@ -1,3 +1,3 @@
-var Name =  prompt("This is a name") 
+var Name =  prompt("Hovig Kevorkian") 
 alert(Name);
 
