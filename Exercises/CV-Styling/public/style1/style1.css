@@ -1,0 +1,181 @@
+
+body {
+    background-color: rgb(255, 255, 255);
+  }
+  #\#wrapper {
+    padding: 5px;
+    
+    
+  }
+    
+   
+    header  div {
+    Display: flex;
+    background-color: grey;
+    margin: 25px 45px;
+  
+    }
+      
+      figure {
+      background-color: grey;
+      
+      }
+  
+      img {
+        margin-top: 10px;
+      
+      }
+      hgroup {
+        color: red;
+        margin-left: 110px;
+        margin-right: 40px;
+        margin-top: 30px;
+        margin-bottom:20px;
+
+      }
+    
+      
+      h3 {
+        color:rgb(2, 2, 2);
+        border-bottom: 1px solid grey;
+        padding-bottom: 5px;
+      
+    }
+    .content {
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns:  50% 50% ;
+      grid-template-areas:
+      " a b "
+      " c d "
+      " e . ";
+      margin: 60px 150px;
+      
+     
+      }    
+      h3:before {
+        content: ' \25CF';
+        font-size: 28px;
+        color: red;
+      }
+    #about {
+        background-color: rgb(255, 255, 255);
+        grid-area: a;
+        }
+    #competencies {
+        background-color: rgb(255, 255, 255);
+        grid-area: b;   
+        }
+    #experiences {
+      grid-area: c;
+    }
+    #education {
+      grid-area: d;
+    }
+    #hobbies {
+        grid-area: e;
+       
+    }
+    #contact {
+        position: absolute;
+        top:-15px;
+        
+        right:50px;
+    }
+    .contact {
+        display: flex;
+    }
+    .contacts {
+        background-color: grey;
+        width: 500px;
+        
+        }
+    
+        #contact h3 {
+            visibility: hidden;
+          }
+          .contact-type {
+            background-color: red;
+            width: 210px;
+            padding: 2px 2px;
+          }
+          .contact-value {
+            background-color: black;
+            color: red;
+            padding: 2px 8px;
+            width:520px;
+            
+          }
+          dl {
+              margin-block-start: 0;
+              margin-block-end: 0;
+          }
+          dd {
+              
+              margin-inline-start: 0px;
+          }
+        
+      .experience-type:after {
+        content:"@";
+      }
+      .experience-type {
+        
+      }
+      .contact-value {
+
+      }
+      
+  
+        
+        
+        .contact contact-skype {
+            visibility: hidden;
+          } 
+        a {
+          text-decoration: none;
+          color: red;
+        }
+        
+        .contact-skype { 
+          
+        }
+        .contact-phone { 
+         
+        }
+        .contact-github { 
+          
+        }
+        .contact-facebook { 
+          
+        }
+  
+        
+        
+        dt {
+          color: white;
+    
+        }
+        .experience-type {
+          color: red;
+        }
+       
+        
+        .experience-institution {
+          color: red;
+        }
+        .experience-tybody {
+          background-color: rgb(255, 255, 255);
+        }
+        @media (max-width: 800px){
+            .content {
+                display: grid;
+                grid-template-columns: 70%;
+                grid-template-areas: 
+                "About"
+                "Competencies"
+                "Experiences";
+
+
+            }
+        }
+        
