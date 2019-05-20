@@ -177,5 +177,9 @@ body {
 
 
             }
+            #education,
+            #hobbies,
+            #contact{
+                display: none;
         }
         
