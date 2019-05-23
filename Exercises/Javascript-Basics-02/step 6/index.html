@@ -11,31 +11,6 @@
       <img src="images/image4.jpg" id="image4" onmouseover="mouseOver(4)" onmouseout="mouseOut(4)" />
       <img src="images/image5.jpg" id="image5" onmouseover="mouseOver(5)" onmouseout="mouseOut(5)" />
   </body>
-  <script>
-      function mouseOver(x) {
-        if (x == 1) {
-          document.getElementById("image" + x).src = "images/image2.jpg";
-        } else if (x == 2) {
-          document.getElementById("image" + x).src = "images/image3.jpg";
-        } else if (x == 3) {
-          document.getElementById("image" + x).src = "images/image4.jpg";
-        } else if (x == 4) {
-          document.getElementById("image" + x).src = "images/image5.jpg";
-        } else if (x == 5) {
-          document.getElementById("image" + x).src = "images/image1.jpg";
-        }}
-
-        function mouseOut(x) {
-        if (x == 1) {
-          document.getElementById("image" + x).src = "images/image1.jpg";
-        } else if (x == 2) {
-          document.getElementById("image" + x).src = "images/image2.jpg";
-        } else if (x == 3) {
-          document.getElementById("image" + x).src = "images/image3.jpg";
-        } else if (x == 4) {
-          document.getElementById("image" + x).src = "images/image4.jpg";
-        } else if (x == 5) {
-          document.getElementById("image" + x).src = "images/image5.jpg";
-        }}
-    </script>
+  
+  <script src="step6.js"></script>
 </html>
