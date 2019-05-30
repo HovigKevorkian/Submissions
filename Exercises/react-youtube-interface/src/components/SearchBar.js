@@ -1,4 +1,6 @@
 import React from 'react';
+import '../style/SearchBar.css';
+import logo from '../assets/logo.png';
 
 class SearchBar extends React.Component {
     state = {
@@ -19,10 +21,8 @@ class SearchBar extends React.Component {
     render() {
         return (
           <div className='search-header'>
-            <img src='#' alt="youTube Logo"/>
+            <img src={logo} alt="youTube Logo"/>
             <form onSubmit={this.handleSubmit} className='search-form'>
-              {/* <div className='field'> */}
-                {/* <label htmlFor='video-search'> </label> */}
                 <input
                   className="search-input"
                   onChange={this.handleChange}
@@ -31,7 +31,6 @@ class SearchBar extends React.Component {
                   placeholder='Search'
                   value={this.state.term}
                 />
-              {/* </div> */}
             </form>
             <div className="icons-header">
             <i class="fas fa-video"></i>

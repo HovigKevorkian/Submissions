@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style/App.css';
 import SearchBar from './SearchBar';
 import YouTubeApi from '../apis/YouTubeApi';
 import VideoList from './VideoList';
@@ -38,7 +39,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='wrapper'>
-          <SearchBar handleFormSubmit={this.handleSubmit} />
+        <SearchBar handleFormSubmit={this.handleSubmit} />
         <div className='sub-wrapper'>
           <div className='ui grid'>
             <div className='ui row'>
