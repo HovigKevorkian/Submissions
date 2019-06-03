@@ -1,0 +1,52 @@
+1. 
+Alex
+Basma
+Hasan
+Jana
+Layal
+Robert
+
+Result: 6 rows returned in 54ms
+At line 1:
+SELECT Name FROM students;
+
+
+2.
+5	Robert	34	M	500
+6	Jana	33	F	500
+
+Result: 2 rows returned in 4ms
+At line 1:
+SELECT ID, Name, Age, Gender, Points FROM students WHERE Age > 30;
+
+
+
+3. None
+
+Result: 0 rows returned in 52ms
+At line 1:
+SELECT  Name FROM students WHERE  Age = "30" AND Gender = "F";
+
+
+4.  200
+
+Result: 1 rows returned in 4ms
+At line 1:
+SELECT Points FROM students WHERE Name = "Alex";
+
+
+5. 
+Result: no such column: Hovig
+   EXECUTING ALL IN 'SQL 1'
+   
+6. 
+
+Result: query executed successfully. Took 0ms, 1 rows affected
+At line 1:
+UPDATE students SET Points = 400 WHERE name = "Basma";
+
+7. 
+Result: query executed successfully. Took 0ms, 1 rows affected
+At line 1:
+UPDATE students SET Points = 150 WHERE name = "Alex";
+
