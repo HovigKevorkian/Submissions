@@ -74,3 +74,16 @@ At line 1:
 DELETE FROM students WHERE Name = "Layal";
 
 
+Joins 
+
+11.
+SELECT employees.Name, companies.Name, companies.Date FROM companies
+INNER JOIN employees on  employees.Company = companies.name;
+
+12.
+SELECT employees.Name, companies.Date FROM employees
+INNER JOIN companies on  employees.company = companies.name where  Date < 2000;
+
+13.
+SELECT Company from employees WHERE Role = "Graphic Designer";
+
