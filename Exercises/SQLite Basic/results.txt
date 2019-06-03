@@ -74,16 +74,64 @@ At line 1:
 DELETE FROM students WHERE Name = "Layal";
 
 
-Joins 
+Joins:
 
 11.
+Marc	Google	1998
+Maria	Google	1998
+Alaa	Facebook	2004
+Hala	Snapchat	2011
+
 SELECT employees.Name, companies.Name, companies.Date FROM companies
 INNER JOIN employees on  employees.Company = companies.name;
 
+
 12.
+Marc	1998
+Maria	1998
+
 SELECT employees.Name, companies.Date FROM employees
 INNER JOIN companies on  employees.company = companies.name where  Date < 2000;
 
+
 13.
+Snapchat
 SELECT Company from employees WHERE Role = "Graphic Designer";
+
+
+14.
+Robert
+Jana
+
+Result: 2 rows returned in 12ms
+At line 1:
+SELECT Name FROM students where Points =  (SELECT MAX (Points) FROM students);
+
+
+15.
+333.333333333333
+SELECT avg(Points) FROM students;
+
+16.
+2
+SELECT count(Name) FROM students WHERE Points = 500;
+
+
+17.Basma
+Hasan
+
+SELECT Name FROM students WHERE   Name LIKE "%s%";
+
+
+18.
+5	Robert	34	M	500
+6	Jana	33	F	500
+4	Layal	18	F	350
+2	Basma	25	F	300
+1	Alex	21	M	200
+3	Hasan	30	M	150
+
+Result: 6 rows returned in 19ms
+At line 1:
+SELECT * FROM students ORDER BY Points DESC;
 
