@@ -1,3 +1,4 @@
+Basic Queries:
 1. 
 Alex
 Basma
@@ -49,4 +50,27 @@ UPDATE students SET Points = 400 WHERE name = "Basma";
 Result: query executed successfully. Took 0ms, 1 rows affected
 At line 1:
 UPDATE students SET Points = 150 WHERE name = "Alex";
+
+
+Creating Tables
+
+1.
+Result: query executed successfully. Took 0ms, 1 rows affected
+At line 1:
+INSERT INTO Graduates (ID, Name, Age, Gender, Points)
+SELECT ID, Name, Age, Gender, Points FROM students 
+WHERE Name = "Layal";
+
+2.
+Result: query executed successfully. Took 0ms, 1 rows affected
+At line 1:
+UPDATE Graduates 
+SET Graduation = "8/09/2018"
+WHERE Name = "Layal";
+
+3.
+Result: query executed successfully. Took 0ms, 1 rows affected
+At line 1:
+DELETE FROM students WHERE Name = "Layal";
+
 
