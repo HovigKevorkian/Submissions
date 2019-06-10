@@ -107,11 +107,13 @@ function add(textArray) {
  * @returns {void}
  */
 function remove(textArray) {
-  if(textArray[1] === undefined) {
+  taskNbr = textArray[1];
+  if(taskNbr === undefined) {
     taskListArray.pop();    
-  } else {
-    taskNbr = textArray[1];
+  } else if(taskNbr <= taskListArray.length) {
     taskListArray.splice((taskNbr-1), 1);
+  } else {
+    console.log('No such task number');
   }
 }
 
