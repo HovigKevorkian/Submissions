@@ -52,7 +52,7 @@ CREATING TABLE
     WHERE id=4
     
 9- UPDATE graduates
-    set graduation = 08/09/2018 
+    set graduation = "08/09/2018" 
     WHERE id=4
     
 10- delete from students WHERE id=4
