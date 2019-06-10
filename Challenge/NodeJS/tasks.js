@@ -102,6 +102,9 @@ function quit(){
   process.exit();
 }
 //  Displays all available commands  .
+// list: will list the items in the tasks object list.
+// add : will insert a new element in the tasks object.
+// remove: will remove the last element in the object, remove 1,2: will remove the first and second element accordingly.
 function help() {
   console.log( "hello\n" + "exit\n" + "Quit\n" );
   
