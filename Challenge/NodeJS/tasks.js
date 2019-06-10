@@ -34,7 +34,7 @@ function startApp(name){
  * @returns {void}
  */
 function onDataReceived(text) {
-  
+  var newtask = text.split(" ");
   var inputstring =  text.split(" ");
   if (text === 'quit\n' ||  text === 'exit\n') {
     quit();
@@ -51,6 +51,9 @@ function onDataReceived(text) {
 
   else if (text === "list\n") {
     list();
+  }
+  else if ( newtask[0] === "add" || text === "add\n") {
+    add(newtask);
   }
   else  {
     unknownCommand(text);
@@ -113,9 +116,17 @@ for (i=0  ; i < tasks.length; i++){
 }
 
 
+function add(addatask) {
+  if (addatask.length >= 2) {
+     addatask.shift();
+     tasks.push(addatask.join(" ").replace("\n", ""));
 
-
-
+  }
+else if (addatask.length == 1 ) {
+    console.log("Error");
+}
+console.log(tasks);
+}
 
 // The following line starts the application
 startApp("Hovig Kevorkian")
