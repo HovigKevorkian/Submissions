@@ -34,9 +34,13 @@ function startApp(name){
  * @returns {void}
  */
 function onDataReceived(text) {
-  if (text === 'quit\n') {
+
+
+  if (text === 'quit\n' ||  text === 'exit\n') {
     quit();
   }
+
+
   else if(text === 'hello\n'){
     hello();
   }
@@ -73,10 +77,18 @@ function hello(){
  *
  * @returns {void}
  */
+
 function quit(){
-  console.log('Quitting now, goodbye!')
+  console.log('Quiting now, goodbye!')
   process.exit();
 }
+
+
+
+
+
+
+
 
 // The following line starts the application
 startApp("Hovig Kevorkian")
