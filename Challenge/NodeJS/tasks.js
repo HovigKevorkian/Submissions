@@ -44,6 +44,8 @@ function onDataReceived(text) {
     list();
   } else if (textArray[0] === 'add' || textArray[0] === 'Add') {
     add(textArray);
+  } else if (textArray[0] === 'remove' || textArray[0] === 'Remove') {
+    remove(textArray);
   } else {
     unknownCommand(text);
   }
@@ -96,6 +98,21 @@ function add(textArray) {
   } else {
     taskListArray.push(textArray.slice(1).join(' ').trim())
     
+  }
+}
+
+/**
+ * Remove Task from the List
+ *
+ * @returns {void}
+ */
+function remove(textArray) {
+  if(textArray[1] === undefined) {
+    taskListArray.pop();    
+  } else {
+    taskNbr = textArray[1];
+    console.log(taskNbr);
+    taskListArray.splice((taskNbr-1), 1);
   }
 }
 
