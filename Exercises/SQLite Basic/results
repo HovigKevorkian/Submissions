@@ -34,3 +34,27 @@
    1	Alex	21	M	180
 
 *** BASIC QUERIES END **********************************************
+
+
+*** CREATING TABLE START *******************************************
+
+CREATING TABLE
+   CREATE TABLE graduates (
+    ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    Name varchar(255) NOT NULL,
+    AGE INT,
+    Gender varchar(255),
+	Points INT
+);
+
+8-  INSERT into graduates (id,name,age,gender,Points)
+    SELECT * from students
+    WHERE id=4
+    
+9- UPDATE graduates
+    set graduation = 08/09/2018 
+    WHERE id=4
+    
+10- delete from students WHERE id=4
+
+*** CREATING TABLE END *********************************************
