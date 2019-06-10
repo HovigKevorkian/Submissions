@@ -38,7 +38,7 @@ function onDataReceived(text) {
     quit();
   } else if (textArray[0] === 'hello' || textArray[0] === 'Hello') {
     hello(textArray);
-  } else if (text === 'help\n') {
+  } else if (textArray[0] === 'help' || textArray[0] === 'Help') {
     help();
   } else {
     unknownCommand(text);
