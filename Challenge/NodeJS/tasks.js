@@ -49,6 +49,9 @@ function onDataReceived(text) {
   help();
   }
 
+  else if (text === "list\n") {
+    list();
+  }
   else  {
     unknownCommand(text);
   }
@@ -93,6 +96,20 @@ function quit(){
 function help() {
   console.log( "hello\n" + "exit\n" + "Quit\n" );
   
+}
+
+var tasks = [
+  "print",
+  "copy",
+  "paste",
+  "move"
+]
+
+function list() {
+  var i ;
+for (i=0  ; i < tasks.length; i++){
+ console.log(i+1 + " " + tasks[i]);
+}
 }
 
 
