@@ -59,7 +59,7 @@ function onDataReceived(text) {
   else if ( removing[0] === "remove" || text === "remove\n") {
   remove(removing);
   }
-  else if (text === newtask[0] === "edit" || text === "edit\n"){
+  else if (newtask[0] ===  "edit" || text === "edit\n"){
     edit(newtask);
   }
 
@@ -161,7 +161,13 @@ if(newtext.length === 1) {
   console.log("Error");
 }
 else if (newtext.length > 1){
+  if(newtext[1] > 0 && newtext[1] <= tasks.length){
+   newtext.shift();
   
+  tasks.splice(newtext[1]-1, 1, newtext.join(" ").replace("\n",""));
+  
+  
+  }
 }
 }
 
