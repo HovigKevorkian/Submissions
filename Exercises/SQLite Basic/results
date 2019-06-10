@@ -82,3 +82,33 @@ CREATING TABLE
     4	Hala	Graphic Designer	Snapchat
 
 *** JOINS END ******************************************************
+
+*** COUNT & FILTER  START ******************************************
+
+14- select name,points from students 
+    where Points=(select max(points) from students)
+    Charbel	911
+    
+15- select avg(points)as Average
+    from students 
+    440.166666666667
+    
+16- select count(Points)as numberofstudents from students
+    where points=500
+    2
+    
+17- select name as namescontains_s from students
+    where name like '%s%'
+    Basma
+    Hasan
+    
+18- select name,points as decreasing_order_pts from students
+    ORDER by points DESC
+    Charbel	911
+    Robert	500
+    Jana	500
+    Basma	400
+    Alex	180
+    Hasan	150
+
+*** COUNT & FILTER  END ********************************************
