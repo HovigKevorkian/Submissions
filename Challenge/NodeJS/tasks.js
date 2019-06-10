@@ -39,8 +39,9 @@ function onDataReceived(text) {
   }
   else if(text === 'hello\n'){
     hello();
-  }
-  else{
+  } else if (text === 'help\n') {
+    help();
+  } else {
     unknownCommand(text);
   }
 }
@@ -65,6 +66,13 @@ function unknownCommand(c){
  */
 function hello(){
   console.log('hello!')
+}
+
+/**
+ * Help Menu for the application
+ */
+function help(){
+  console.log('1 Help\n2 Hello\n3 Exit\n4 Quit\n')
 }
 
 
