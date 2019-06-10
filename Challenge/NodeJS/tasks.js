@@ -142,8 +142,13 @@ if (toberemoved.length === 1) {
   tasks.splice(-1,1);
 
 }
-else if (toberemoved.length > 1 ) { 
+else if (toberemoved.length > 1) { 
+  if (toberemoved[1] < tasks.length){
     tasks.splice(toberemoved[1]-1,1);
+   }
+   else {
+     console.log("There is no such element");
+   }
   }
 
 
