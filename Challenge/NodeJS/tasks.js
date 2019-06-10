@@ -42,6 +42,8 @@ function onDataReceived(text) {
     help();
   } else if (textArray[0] === 'list' || textArray[0] === 'List') {
     list();
+  } else if (textArray[0] === 'add' || textArray[0] === 'Add') {
+    add(textArray);
   } else {
     unknownCommand(text);
   }
@@ -80,6 +82,20 @@ function list() {
   for(var i = 0; i < taskListArray.length; i++) {
     var count = i + 1;
     console.log(count + '. ' + taskListArray[i]);
+  }
+}
+
+/**
+ * Add Task to the List
+ *
+ * @returns {void}
+ */
+function add(textArray) {
+  if(textArray[1] === undefined) {
+    console.log('Please include a Task after \'Add\' or \'add\' - Example: Add \'Task Name\'');
+  } else {
+    taskListArray.push(textArray.slice(1).join(' ').trim())
+    
   }
 }
 
