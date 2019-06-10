@@ -174,7 +174,7 @@ function uncheck(textArray) {
     console.log('Please add a Task number after \'Check\' or \'check\' - Example: Check 2');
   }
     else if(taskNbr <= taskListArray.length) {
-    taskListArray[taskNbr-1].checked = 'true';
+    taskListArray[taskNbr-1].checked = 'false';
     taskListArray[taskNbr-1].Task = taskListArray[taskNbr-1].Task.replace('[✓]', '[ ]');
   } else {
     console.log('No such task number');
@@ -187,7 +187,7 @@ function uncheck(textArray) {
  *
  */
 function help() {
-  console.log('Please choose from the below options:\n1 Help\n2 Hello\n3 List\n4 Add\n5 Remove\n6 Exit or Quit\n');
+  console.log('Please choose from the below options:\n1 Help\n2 Hello\n3 List\n4 Add\n5 Check\n6 Uncheck\n7 Remove\n8 Exit or Quit\n');
 }
 
 /**
