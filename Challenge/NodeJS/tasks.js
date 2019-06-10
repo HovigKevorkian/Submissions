@@ -31,7 +31,11 @@ function startApp(name) {
  * @param  {string} text data typed by the user
  * @returns {void}
  */
-var taskListArray = ['Go', 'Go again', 'Go again and again', 'Enough']
+var taskListArray = [ {Task: '[ ] Go', checked: false},
+                      {Task: '[ ] again', checked: false},
+                      {Task: '[ ] again and again', checked: false},
+                      {Task: '[ ] Enough', checked: false} ]
+
 function onDataReceived(text) {
   var textArray = text.trim().split(' ');
   if (text === 'quit\n' || text === 'exit\n') {
@@ -46,6 +50,10 @@ function onDataReceived(text) {
     add(textArray);
   } else if (textArray[0] === 'edit' || textArray[0] === 'Edit') {
     edit(textArray);
+  } else if (textArray[0] === 'check' || textArray[0] === 'Check') {
+    check(textArray);
+  } else if (textArray[0] === 'uncheck' || textArray[0] === 'Uncheck') {
+    uncheck(textArray);
   } else if (textArray[0] === 'remove' || textArray[0] === 'Remove') {
     remove(textArray);
   } else {
@@ -85,7 +93,7 @@ function hello(textArray) {
 function list() {
   for(var i = 0; i < taskListArray.length; i++) {
     var count = i + 1;
-    console.log(count + '. ' + taskListArray[i]);
+    console.log(count + '. ' + taskListArray[i].Task);
   }
 }
 
@@ -98,8 +106,7 @@ function add(textArray) {
   if(textArray[1] === undefined) {
     console.log('Please include a Task after \'Add\' or \'add\' - Example: Add \'Task Name\'');
   } else {
-    taskListArray.push(textArray.slice(1).join(' ').trim())
-    
+    taskListArray.push({Task: textArray.slice(1).join(' ').trim(), checked: false})
   }
 }
 
@@ -130,10 +137,45 @@ function edit(textArray) {
     console.log('Please include a Task number after \'Edit\' or \'edit\' - Example: Edit 2');
   } else if(isNaN(taskNbr)) {
     taskListArray.pop();
-    taskListArray.push(textArray.slice(1).join(' ').trim())
-  } 
+    taskListArray.push({Task: textArray.slice(1).join(' ').trim(), checked: false})
+  }
     else if(taskNbr <= taskListArray.length) {
-    taskListArray.splice((taskNbr-1), 1, textArray.slice(2).join(' ').trim());
+    taskListArray.splice((taskNbr-1), 1, {Task: textArray.slice(2).join(' ').trim(), checked: false});
+  } else {
+    console.log('No such task number');
+  }
+}
+
+/**
+ * Check Task inside the List
+ *
+ * @returns {void}
+ */
+function check(textArray) {
+  taskNbr = textArray[1];
+  if(taskNbr === undefined) {
+    console.log('Please add a Task number after \'Check\' or \'check\' - Example: Check 2');
+  } else if(isNaN(taskNbr)) {
+    console.log('Please add a Task number after \'Check\' or \'check\' - Example: Check 2');
+  }
+    else if(taskNbr <= taskListArray.length) {
+    taskListArray[taskNbr-1].checked = 'true';
+    taskListArray[taskNbr-1].Task = taskListArray[taskNbr-1].Task. replace('[ ]', '[✓]');
+  } else {
+    console.log('No such task number');
+  }
+}
+
+function uncheck(textArray) {
+  taskNbr = textArray[1];
+  if(taskNbr === undefined) {
+    console.log('Please add a Task number after \'Check\' or \'check\' - Example: Check 2');
+  } else if(isNaN(taskNbr)) {
+    console.log('Please add a Task number after \'Check\' or \'check\' - Example: Check 2');
+  }
+    else if(taskNbr <= taskListArray.length) {
+    taskListArray[taskNbr-1].checked = 'true';
+    taskListArray[taskNbr-1].Task = taskListArray[taskNbr-1].Task.replace('[✓]', '[ ]');
   } else {
     console.log('No such task number');
   }
@@ -145,7 +187,7 @@ function edit(textArray) {
  *
  */
 function help() {
-  console.log('1 Help\n2 Hello\n3 List\n4 Add\n5 Remove\n6 Exit or Quit\n');
+  console.log('Please choose from the below options:\n1 Help\n2 Hello\n3 List\n4 Add\n5 Remove\n6 Exit or Quit\n');
 }
 
 /**
