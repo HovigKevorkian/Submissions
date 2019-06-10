@@ -1,0 +1,36 @@
+*** BASIC QUERIES START **********************************************
+
+1- SELECT * FROM students
+    1	Alex	21	M	200
+    2	Basma	25	F	300
+    3	Hasan	30	M	150
+    4	Layal	18	F	350
+    5	Robert	34	M	500
+    6	Jana	33	F	500
+    
+2- SELECT * FROM students
+   WHERE Age>30
+    5	Robert	34	M	500
+    6	Jana	33	F	500
+   
+3- SELECT * FROM students
+   WHERE Gender='F' and 
+   Age =30
+   
+4- SELECT Points From students
+   Where name='Alex'
+   200
+   
+5- INSERT into students(name,Age,Gender,Points)
+   VALUES('Charbel',38,'M',911)
+   7	Charbel	38	M	911
+   
+6- UPDATE students SET Points=Points+100
+   WHERE name='Basma'
+   2	Basma	25	F	400
+   
+7- UPDATE students SET Points=Points-20
+   WHERE name='Alex'
+   1	Alex	21	M	180
+
+*** BASIC QUERIES END **********************************************
