@@ -31,7 +31,7 @@ function startApp(name) {
  * @param  {string} text data typed by the user
  * @returns {void}
  */
-
+var taskListArray = ['Go', 'Go again', 'Go again and again', 'Enough']
 function onDataReceived(text) {
   var textArray = text.trim().split(' ');
   if (text === 'quit\n' || text === 'exit\n') {
@@ -40,6 +40,8 @@ function onDataReceived(text) {
     hello(textArray);
   } else if (textArray[0] === 'help' || textArray[0] === 'Help') {
     help();
+  } else if (textArray[0] === 'list' || textArray[0] === 'List') {
+    list();
   } else {
     unknownCommand(text);
   }
@@ -68,6 +70,19 @@ function hello(textArray) {
     console.log(textArray[0] + ' ' + textArray.slice(1).join(' ') + '!');
   }
 }
+
+/**
+ * Show Task List
+ *
+ * @returns {void}
+ */
+function list() {
+  for(var i = 0; i < taskListArray.length; i++) {
+    var count = i + 1;
+    console.log(count + '. ' + taskListArray[i]);
+  }
+}
+
 /**
  * This is a Help Menu for the application
  *
