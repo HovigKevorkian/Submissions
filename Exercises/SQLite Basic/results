@@ -58,3 +58,27 @@ CREATING TABLE
 10- delete from students WHERE id=4
 
 *** CREATING TABLE END *********************************************
+
+
+*** JOINS START ****************************************************
+
+11- SELECT employees.name, employees.company, companies.date
+    from employees inner JOIN companies
+    on employees.Company=companies.name
+    Marc	Google	1998
+    Maria	Google	1998
+    Alaa	Facebook	2004
+    Hala	Snapchat	2011
+    
+12- SELECT employees.name, employees.company, companies.date
+    from employees inner JOIN companies
+    on employees.Company=companies.name
+    where companies.Date<2000
+    Marc	Google	1998
+    Maria	Google	1998
+    
+13- SELECT * from employees
+    WHERE Role='Graphic Designer'
+    4	Hala	Graphic Designer	Snapchat
+
+*** JOINS END ******************************************************
