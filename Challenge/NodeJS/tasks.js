@@ -59,6 +59,9 @@ function onDataReceived(text) {
   else if ( removing[0] === "remove" || text === "remove\n") {
   remove(removing);
   }
+  else if (text === newtask[0] === "edit" || text === "edit\n"){
+    edit(newtask);
+  }
 
   
   else  {
@@ -143,15 +146,23 @@ if (toberemoved.length === 1) {
 
 }
 else if (toberemoved.length > 1) { 
-  if (toberemoved[1] < tasks.length){
+  if (toberemoved[1] < tasks.length && toberemoved[1] > 0){
     tasks.splice(toberemoved[1]-1,1);
    }
    else {
      console.log("There is no such element");
+  
    }
   }
+}
 
-
+function edit(newtext){
+if(newtext.length === 1) {
+  console.log("Error");
+}
+else if (newtext.length > 1){
+  
+}
 }
 
 // The following line starts the application
