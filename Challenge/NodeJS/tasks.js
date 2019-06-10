@@ -36,6 +36,7 @@ function startApp(name){
 function onDataReceived(text) {
   var newtask = text.split(" ");
   var inputstring =  text.split(" ");
+  var removing =  text.split(" ");
   if (text === 'quit\n' ||  text === 'exit\n') {
     quit();
   }
@@ -55,6 +56,11 @@ function onDataReceived(text) {
   else if ( newtask[0] === "add" || text === "add\n") {
     add(newtask);
   }
+  else if ( removing[0] === "remove" || text === "remove\n") {
+  remove(removing);
+  }
+
+  
   else  {
     unknownCommand(text);
   }
@@ -126,6 +132,18 @@ else if (addatask.length == 1 ) {
     console.log("Error");
 }
 console.log(tasks);
+}
+
+function remove(toberemoved) {
+if (toberemoved.length === 1) {
+  tasks.splice(-1,1);
+
+}
+else if (toberemoved.length > 1 ) { 
+    tasks.splice(toberemoved[1]-1,1);
+  }
+
+
 }
 
 // The following line starts the application
