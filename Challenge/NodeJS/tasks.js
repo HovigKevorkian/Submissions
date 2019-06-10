@@ -69,7 +69,8 @@ function hello(){
 }
 
 /**
- * Help Menu for the application
+ * This is a Help Menu for the application
+ * 
  */
 function help(){
   console.log('1 Help\n2 Hello\n3 Exit\n4 Quit\n')
