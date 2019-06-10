@@ -1,20 +1,57 @@
+const fs = require('fs');
+// save the path form the command line
+var AppPath;
+if(process.argv[2]){
+  AppPath = process.argv[2];
+}else{
+  AppPath = 'database.json';
+}
+
+//  save data on exit or quit.
+const SaveData = (data, AppPath) => {
+  try {
+    fs.writeFileSync(AppPath, JSON.stringify(data))
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+//  load data from  database.json
+const loadData = (AppPath) => {
+  try {
+    return fs.readFileSync(AppPath, 'utf8')
+  } catch (error) {
+    console.error(error)
+    return false
+  }
+}
+
+
 /**
  * Starts the application
  * This is the function that is run when the app starts
- *
+ * 
  * It prints a welcome line, and then a line with "----",
  * then nothing.
- *
+ *  
  * @param  {string} name the name of the app
  * @returns {void}
  */
-function startApp(name) {
+function startApp(name){
+  //  if the file i want to load data from doens't exist , i create one and store the default values of listArrayOfObjects in it
+  if(!fs.existsSync(AppPath)){
+    SaveData(taskListArray, AppPath);
+    }
+
+  // load data from the file when statrting the app
+  taskListArray = JSON.parse(loadData(AppPath));
   process.stdin.resume();
   process.stdin.setEncoding('utf8');
   process.stdin.on('data', onDataReceived);
-  console.log(`Welcome to ${name}'s application!`);
-  console.log('--------------------');
+  console.log(`Welcome to ${name}'s application!`)
+  console.log("--------------------")
 }
+
 
 /**
  * Decides what to do depending on the data that was received
@@ -31,10 +68,10 @@ function startApp(name) {
  * @param  {string} text data typed by the user
  * @returns {void}
  */
-var taskListArray = [ {Task: '[ ] Go', checked: false},
-                      {Task: '[ ] again', checked: false},
-                      {Task: '[ ] again and again', checked: false},
-                      {Task: '[ ] Enough', checked: false} ]
+var taskListArray = [ {Task: 'Go', checked: false},
+                      {Task: 'Go Again', checked: false},
+                      {Task: 'Go Again and again', checked: false},
+                      {Task: 'Enough', checked: false} ]
 
 function onDataReceived(text) {
   var textArray = text.trim().split(' ');
@@ -93,7 +130,13 @@ function hello(textArray) {
 function list() {
   for(var i = 0; i < taskListArray.length; i++) {
     var count = i + 1;
-    console.log(count + '. ' + taskListArray[i].Task);
+    if(taskListArray[i].checked == 'true') {
+      console.log(count + ' [✓] ' + taskListArray[i].Task);
+    } else {
+      console.log(count + ' [ ] ' + taskListArray[i].Task);
+    }
+
+    // console.log(count + '. ' + taskListArray[i].Task);
   }
 }
 
@@ -160,7 +203,6 @@ function check(textArray) {
   }
     else if(taskNbr <= taskListArray.length) {
     taskListArray[taskNbr-1].checked = 'true';
-    taskListArray[taskNbr-1].Task = taskListArray[taskNbr-1].Task. replace('[ ]', '[✓]');
   } else {
     console.log('No such task number');
   }
@@ -175,7 +217,6 @@ function uncheck(textArray) {
   }
     else if(taskNbr <= taskListArray.length) {
     taskListArray[taskNbr-1].checked = 'false';
-    taskListArray[taskNbr-1].Task = taskListArray[taskNbr-1].Task.replace('[✓]', '[ ]');
   } else {
     console.log('No such task number');
   }
@@ -195,6 +236,7 @@ function help() {
  * @returns {void}
  */
 function quit() {
+  SaveData(taskListArray, AppPath);
   console.log('Quitting now, goodbye!');
   process.exit();
 }
