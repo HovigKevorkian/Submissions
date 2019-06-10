@@ -111,7 +111,6 @@ function remove(textArray) {
     taskListArray.pop();    
   } else {
     taskNbr = textArray[1];
-    console.log(taskNbr);
     taskListArray.splice((taskNbr-1), 1);
   }
 }
@@ -121,7 +120,7 @@ function remove(textArray) {
  *
  */
 function help() {
-  console.log('1 help\n2 hello\n3 exit\n4 quit\n');
+  console.log('1 Help\n2 Hello\n3 List\n4 Add\n5 Remove\n6 Exit or Quit\n');
 }
 
 /**
