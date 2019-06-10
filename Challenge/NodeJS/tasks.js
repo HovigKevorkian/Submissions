@@ -181,7 +181,6 @@ function uncheck(textArray) {
   }
 }
 
-
 /**
  * This is a Help Menu for the application
  *
