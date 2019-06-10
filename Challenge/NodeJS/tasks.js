@@ -44,6 +44,8 @@ function onDataReceived(text) {
     list();
   } else if (textArray[0] === 'add' || textArray[0] === 'Add') {
     add(textArray);
+  } else if (textArray[0] === 'edit' || textArray[0] === 'Edit') {
+    edit(textArray);
   } else if (textArray[0] === 'remove' || textArray[0] === 'Remove') {
     remove(textArray);
   } else {
@@ -109,13 +111,34 @@ function add(textArray) {
 function remove(textArray) {
   taskNbr = textArray[1];
   if(taskNbr === undefined) {
-    taskListArray.pop();    
+    taskListArray.pop();
   } else if(taskNbr <= taskListArray.length) {
     taskListArray.splice((taskNbr-1), 1);
   } else {
     console.log('No such task number');
   }
 }
+
+/**
+ * Edit Task inside the List
+ *
+ * @returns {void}
+ */
+function edit(textArray) {
+  taskNbr = textArray[1];
+  if(taskNbr === undefined) {
+    console.log('Please include a Task number after \'Edit\' or \'edit\' - Example: Edit 2');
+  } else if(isNaN(taskNbr)) {
+    taskListArray.pop();
+    taskListArray.push(textArray.slice(1).join(' ').trim())
+  } 
+    else if(taskNbr <= taskListArray.length) {
+    taskListArray.splice((taskNbr-1), 1, textArray.slice(2).join(' ').trim());
+  } else {
+    console.log('No such task number');
+  }
+}
+
 
 /**
  * This is a Help Menu for the application
