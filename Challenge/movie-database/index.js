@@ -58,8 +58,6 @@ app.get('/movies/read/by-title', (req, res) => {
 /***************************************/
 app.get('/movies/read/id/:id', (req, res) => {
   const id = parseInt(req.params.id);
-  
-  console.log(id);
   if(id <= movies.length && id > 0) {
     res.status(200).send({
       status: 200,
@@ -100,6 +98,27 @@ app.get('/movies/create', (req, res) => {
     }
   });
 
+/************** Delete Movies **************/
+/*******************************************/
+app.get('/movies/delete/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  if(id <= movies.length && id > 0) {
+    movies.splice(id-1, 1);
+    res.status(200).send({
+      status: 200,
+      data: movies
+    })
+  } else {
+    res.status(404).send({
+      status: 404,
+      error: 'true',
+      message:'the movie ' + id + ' does not exist'
+    })
+  }
+});
+
+
+
 // Update Movies
 app.get('/movies/update', (req, res) => {
   res.status(200).send({
@@ -109,13 +128,7 @@ app.get('/movies/update', (req, res) => {
 });
 
 
-// Delete Movies
-app.get('/movies/delete', (req, res) => {
-  res.status(200).send({
-    status: 200,
-    message: 'ok'
-  })
-});
+
 
 // get Time message
 app.get('/time', (req, res) => {
