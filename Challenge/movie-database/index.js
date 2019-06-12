@@ -89,8 +89,8 @@ app.get('/movies/create', (req, res) => {
     } else {
       movies.push({
         title: Title,
-        year: Year,
-        rating: (Rating >= 0 && Rating <= 10 && isNaN(Rating)) ? Rating : 4
+        year: parseInt(Year),
+        rating: parseInt((Rating >= 0 && Rating <= 10 && Rating != '') ? Rating : 4)
       })
       res.status(200).send({
         status: 200,
