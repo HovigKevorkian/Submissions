@@ -2,10 +2,10 @@
   "name": "movie-database",
   "version": "1.0.0",
   "description": "or CMDB for short",
-  "main": "index.js",
+  "main": "Server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", // this should be there
-    "dev": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "dev": "nodemon Server.js"
   },
  
   "author": "",
