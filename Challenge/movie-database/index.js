@@ -5,14 +5,6 @@ import movies from './db/db';
 // Set up the express app
 const app = express();
 
-// Create New Movies
-app.get('/movies/create', (req, res) => {
-  res.status(200).send({
-    status: 200,
-    message: 'ok'
-  })
-});
-
 /************** Read Movies **************/
 /*****************************************/
 app.get('/movies/read', (req, res) => {
@@ -62,6 +54,52 @@ app.get('/movies/read/by-title', (req, res) => {
   })
 });
 
+/********** Read Movies by ID **********/
+/***************************************/
+app.get('/movies/read/id/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  
+  console.log(id);
+  if(id <= movies.length && id > 0) {
+    res.status(200).send({
+      status: 200,
+      data: movies[id-1]
+    })
+  } else {
+    res.status(404).send({
+      status: 404,
+      error: 'true',
+      message:'the movie ' + id + ' does not exist'
+    })
+  }
+});
+
+/************** Create Movies **************/
+/*******************************************/
+app.get('/movies/create', (req, res) => {
+    const Title = req.query.title;
+    const Year = req.query.year;
+    const Rating = req.query.rating;
+    if(!Title || !Year || isNaN(Year) || Year.length != 4) {
+      res.status(403).send({
+        status: 403,
+        error: 'true',
+        message:'you cannot create a movie without providing a title and a year'
+      })
+    } else {
+      movies.push({
+        title: Title,
+        year: Year,
+        rating: (Rating >= 0 && Rating <= 10 && isNaN(Rating)) ? Rating : 4
+      })
+      res.status(200).send({
+        status: 200,
+        message: 'ok',
+        data: movies
+      })
+    }
+  });
+
 // Update Movies
 app.get('/movies/update', (req, res) => {
   res.status(200).send({
@@ -69,6 +107,7 @@ app.get('/movies/update', (req, res) => {
     message: 'ok'
   })
 });
+
 
 // Delete Movies
 app.get('/movies/delete', (req, res) => {
