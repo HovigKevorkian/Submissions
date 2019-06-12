@@ -13,11 +13,52 @@ app.get('/movies/create', (req, res) => {
   })
 });
 
-// Read Movies
+/************** Read Movies **************/
+/*****************************************/
 app.get('/movies/read', (req, res) => {
   res.status(200).send({
     status: 200,
     data: movies
+  })
+});
+
+/********** Read Movies by Date **********/
+/*****************************************/
+app.get('/movies/read/by-date', (req, res) => {
+  res.status(200).send({
+    status: 200,
+    data: movies.sort(function(a,b) {
+      return (b.year) - (a.year); })
+  })
+});
+
+/********* Read Movies by rating *********/
+/*****************************************/
+app.get('/movies/read/by-rating', (req, res) => {
+  res.status(200).send({
+    status: 200,
+    data: movies.sort(function(a,b) {
+      return (b.rating) - (a.rating); })
+  })
+});
+
+/********* Read Movies by Title *********/
+/****************************************/
+app.get('/movies/read/by-title', (req, res) => {
+  res.status(200).send({
+    status: 200,
+    data: movies.sort(function(a,b) {
+      var TitleA = a.title.toUpperCase();
+      var TitleB = b.title.toUpperCase();
+    
+    // return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+    if(TitleA < TitleB) {
+      return -1
+    } else if(TitleA > TitleB) {
+      return 1
+    } else {
+      return 0 }
+  })
   })
 });
 
