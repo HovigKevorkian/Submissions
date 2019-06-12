@@ -164,6 +164,7 @@ else if (newtext.length > 1){
   if(newtext[1] > 0 && newtext[1] <= tasks.length){
    newtext.shift();
   
+  
   tasks.splice(newtext[1]-1, 1, newtext.join(" ").replace("\n",""));
   
   
