@@ -1,10 +1,9 @@
+
 const movies = [
-  {
-    id: 1,
-    title: 'Men in Black: International (2019)',
-    description:
-      'The Men in Black have always protected the Earth from the scum of the universe. In this new adventure, they tackle their biggest threat to date: a mole in the Men in Black organization.'
-  }
+  { title: 'Jaws', year: 1975, rating: 8 },
+  { title: 'Avatar', year: 2009, rating: 7.8 },
+  { title: 'Brazil', year: 1985, rating: 8 },
+  { title: 'الإرهاب والكباب‎', year: 1992, rating: 6.2 }
 ];
 
 export default movies;

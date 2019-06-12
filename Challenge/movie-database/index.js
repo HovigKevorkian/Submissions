@@ -5,8 +5,32 @@ import movies from './db/db';
 // Set up the express app
 const app = express();
 
-// get Ok message
-app.get('/test', (req, res) => {
+// Create New Movies
+app.get('/movies/create', (req, res) => {
+  res.status(200).send({
+    status: 200,
+    message: 'ok'
+  })
+});
+
+// Read Movies
+app.get('/movies/read', (req, res) => {
+  res.status(200).send({
+    status: 200,
+    data: movies
+  })
+});
+
+// Update Movies
+app.get('/movies/update', (req, res) => {
+  res.status(200).send({
+    status: 200,
+    message: 'ok'
+  })
+});
+
+// Delete Movies
+app.get('/movies/delete', (req, res) => {
   res.status(200).send({
     status: 200,
     message: 'ok'
