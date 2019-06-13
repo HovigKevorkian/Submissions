@@ -37,17 +37,11 @@ app.get('/search', function(req,res) {
 
     else {
         res.send({status:200, message:"ok", data:searching});
-    }
-    
+    }  
  });
 
-// //  pp.get('/movies/create', function(req,res) {
-// //     res.send({status:200, message:"ok", data:searching});
-     
-//  });
 
  app.get('/movies/read', function(req,res) {
-     
     res.send({status:200, data:movies });
  });
  
@@ -62,7 +56,6 @@ app.get('/search', function(req,res) {
 
 
  app.get('/movies/read/by-rating', function(req,res) {
-    // movies.sort((a, b) => (a.rating > b.rating) ? 1 : -1)
     var byrating = movies.sort(function(a, b) {
         return a.rating - b.rating;
     });
@@ -70,15 +63,25 @@ app.get('/search', function(req,res) {
  });
 
  app.get('/movies/read/by-title', function(req,res) {
-    // movies.sort((a, b) => (a.rating > b.rating) ? 1 : -1)
     var bytitle = movies.sort(function(a, b) {
         var x = a.title.toLowerCase();
         var y = b.title.toLowerCase();
         return x<y?-1:x>y?1:0;
-    
     });
     res.send({status:200, data:bytitle});
  });
+
+ app.get('/movies/read/id/:x', function(req,res) {
+     var id = req.params.x
+    if( id === "" || id > movies.length-1 || id < 0){
+        res.send({status:404, error:true, message:"the movie " + id + " does not exist"});    
+    }
+
+    else if (id >= 0 || id <= movies.length-1) {
+        res.send({status:200, data:movies[id]});
+    }
+ });
+
  
  
 
