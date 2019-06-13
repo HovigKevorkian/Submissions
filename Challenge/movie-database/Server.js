@@ -82,6 +82,28 @@ app.get('/search', function(req,res) {
     }
  });
 
+ app.get('/movies/add', function(req,res) {
+    var titles = req.query.title;
+    var years = req.query.year;
+    var ratings = req.query.rating;
+    if (titles === "" || years === "" || years.length !== 4 || Number.isInteger(years)) {
+        res.send({status:403, error:true, message:'you cannot create a movie without providing a title and a year'});
+    }
+    
+        
+    if (ratings === "") {
+        ratings.value = 4; // This isn't working.
+        var newmovies = movies.push({ title: titles, year: parseInt(years), rating: parseInt(ratings)})
+        res.send({status:200,  message: movies});   
+        }
+    else {
+        console.log(movies)  
+        res.send({status:200,  message: movies});   
+    }
+    
+   });
+ 
+
  
  
 
