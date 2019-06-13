@@ -50,7 +50,36 @@ app.get('/search', function(req,res) {
      
     res.send({status:200, data:movies });
  });
-     
+ 
+
+ app.get('/movies/read/by-date', function(req,res) {
+    // movies.sort((a, b) => (a.rating > b.rating) ? 1 : -1)
+    var bydate = movies.sort(function(a, b) {
+        return a.year - b.year;
+    });
+    res.send({status:200, data:bydate});
+ });
+
+
+ app.get('/movies/read/by-rating', function(req,res) {
+    // movies.sort((a, b) => (a.rating > b.rating) ? 1 : -1)
+    var byrating = movies.sort(function(a, b) {
+        return a.rating - b.rating;
+    });
+    res.send({status:200, data:byrating});
+ });
+
+ app.get('/movies/read/by-title', function(req,res) {
+    // movies.sort((a, b) => (a.rating > b.rating) ? 1 : -1)
+    var bytitle = movies.sort(function(a, b) {
+        var x = a.title.toLowerCase();
+        var y = b.title.toLowerCase();
+        return x<y?-1:x>y?1:0;
+    
+    });
+    res.send({status:200, data:bytitle});
+ });
+ 
  
 
 //  pp.get('/movies/create', function(req,res) {
