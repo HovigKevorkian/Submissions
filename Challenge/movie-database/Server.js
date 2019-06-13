@@ -8,14 +8,33 @@ const port = 3000;
      res.send({message:"ok", status:"yayyyy", id:1});
  })
 
- app.get('/hello/x:', function(req, res){
-    // console.log(req)
-    // console.log(res)
-     const n = req.query.name;
-     res.send({url:req.url, query:n, paramater:req.params.x});
- })
+//  app.get('/hello/:x', function(req, res){
+//      console.log(req)
+//      console.log(res)
+//      const n = req.query.name;
+//      res.send({url:req.url, query:n, paramater:req.params.x});
+//  });
 
- app.get('/test', function(req, res){
+app.get('/Hello/:x', function(req, res){
+    const n = req.params.x;
+    res.send({status:200,  message:"Hello," + n});
+});
+
+
+app.get('/search', function(req,res) {
+    var searching = req.query.s
+    if ( searching === "" ){
+        res.send({status:500, error:true, message:"you have to provide a search"});
+           }
+
+    else {
+        res.send({status:200, message:"ok", data:searching});
+    }
+    
+ });
+
+
+ app.get('/test/', function(req, res){
     // console.log(req)
     // console.log(res)
     
@@ -34,6 +53,7 @@ const port = 3000;
      res.send({status:200, message: "Current Time is " + hour + ":" + minutes + ":" + seconds });
     
  });
+
 
  app.listen(port, function(){
      console.log("Server is running on " + port + " port");
