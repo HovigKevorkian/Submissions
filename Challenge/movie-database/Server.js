@@ -1,3 +1,11 @@
+const movies = [
+    { title: 'Jaws', year: 1975, rating: 8 },
+    { title: 'Avatar', year: 2009, rating: 7.8 },
+    { title: 'Brazil', year: 1985, rating: 8 },
+    { title: 'الإرهاب والكباب‎', year: 1992, rating: 6.2 }
+]
+
+
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -32,6 +40,31 @@ app.get('/search', function(req,res) {
     }
     
  });
+
+// //  pp.get('/movies/create', function(req,res) {
+// //     res.send({status:200, message:"ok", data:searching});
+     
+//  });
+
+ app.get('/movies/read', function(req,res) {
+     
+    res.send({status:200, data:movies });
+ });
+     
+ 
+
+//  pp.get('/movies/create', function(req,res) {
+//     res.send({status:200, message:"ok", data:searching});
+     
+//  });
+
+//  pp.get('/movies/update', function(req,res) {
+//     res.send({status:200, message:"ok", data:searching});
+     
+//  });
+
+
+
 
 
  app.get('/test/', function(req, res){
