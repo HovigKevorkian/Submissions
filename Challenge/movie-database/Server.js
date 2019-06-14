@@ -92,15 +92,16 @@ app.get('/search', function(req,res) {
     }
     
         
-    if (ratings === "") {
+    else if (ratings === "") {
         
        
-        
-        ratings.value = 4; // This isn't working.
+        var newmovies = movies.push({ title: titles, year: parseInt(years), rating: 4})
+        //  movies.rating.value = 4; // This isn't working.
         res.send({status:200,  message: movies});   
         }
     else {
-        console.log(movies)  
+        var newmovies = movies.push({ title: titles, year: parseInt(years), rating: parseInt(ratings)})
+        
         res.send({status:200,  message: movies});   
     }
     
